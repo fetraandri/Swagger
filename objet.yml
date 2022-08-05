@@ -100,9 +100,27 @@ paths:
         - Students
       summary: Delete the specified student
       operationId: deleteStudent
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items :
+                  $ref: '#/components/schemas/NewStudents'
     put:
       tags: 
         - Students
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items :
+                  $ref: '#/components/schemas/NewStudents'
 
   /courses:
     get:
@@ -110,15 +128,42 @@ paths:
         - Courses
       summary: Get a list of courses
       operationId: getCourses 
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items :
+                  $ref: '#/components/schemas/NewStudents'
     post:
       tags:
         - Courses
       summary: Create new courses
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items :
+                  $ref: '#/components/schemas/NewStudents'
   /courses/{id}:
      get:
       tags:
         - Courses
       summary: Get course number id  
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items :
+                  $ref: '#/components/schemas/NewStudents'
       
 components:
   schemas:
@@ -137,6 +182,8 @@ components:
           type: string
         group:
           type: string
+          
+
           
 
           
